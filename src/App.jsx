@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Toaster } from 'sonner'; // <--- Import this
+import { Toaster } from 'sonner'; // <--- IMPORT THIS
 import Layout from './components/layout/Layout';
 import Dashboard from './pages/Dashboard';
 import Properties from './pages/Properties';
@@ -10,7 +10,7 @@ import Finance from './pages/Finance';
 function App() {
   return (
     <Router>
-      {/* The Notification System */}
+      {/* THE NOTIFICATION POPUP ENGINE */}
       <Toaster position="top-right" richColors /> 
       
       <Layout>
