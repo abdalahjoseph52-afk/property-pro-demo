@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'sonner';
 import { 
   ArrowUpRight, 
   ArrowDownRight, 
@@ -73,10 +74,16 @@ const Dashboard = () => {
           <p className="text-slate-500 text-sm mt-1">Global performance report as of Nov 21, 2025</p>
         </div>
         <div className="flex gap-3">
-          <button className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg text-slate-600 text-sm font-medium hover:bg-slate-50 hover:text-indigo-600 transition-all">
+          <button 
+            onClick={() => toast.success("Report generation started...", { description: "This is a UI demo. No real file created." })}
+            className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg text-slate-600 text-sm font-medium hover:bg-slate-50 hover:text-indigo-600 transition-all"
+          >
             <Download size={16} strokeWidth={1.5} /> Export PDF
           </button>
-          <button className="px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 shadow-lg shadow-indigo-200 transition-all">
+          <button 
+            onClick={() => toast.info("Demo Mode: Backend integration coming soon.")}
+            className="px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 shadow-lg shadow-indigo-200 transition-all"
+          >
             Add Property
           </button>
         </div>
